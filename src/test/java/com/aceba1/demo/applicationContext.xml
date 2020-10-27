@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+    <bean id="myFortuneService"
+        class="com.aceba1.demo.HappyFortuneService">
+    </bean>
+
+    <bean id="myFortuneService"
+        class="com.aceba1.demo.BaseballCoach">
+            <constructor-arg ref="myFortuneService" />
+    </bean>
+</beans>
