@@ -8,9 +8,19 @@ public class TennisCoach implements Coach {
 
   private FortuneService service;
 
+//  @Autowired
+//  public TennisCoach(FortuneService fortuneService) {
+//    this.service = fortuneService;
+//  }
+
+  public TennisCoach() {
+    System.out.println(">> TennisCoach : Default Constructor");
+  }
+
   @Autowired
-  public TennisCoach(FortuneService fortuneService) {
-    this.service = fortuneService;
+  public void doMyTaxes(FortuneService fortuneService) {
+    System.out.println(">> TennisCoach : Do My Bidding");
+    service = fortuneService;
   }
 
   @Override
