@@ -1,5 +1,6 @@
 package com.aceba1.demoapp;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -7,12 +8,9 @@ import java.util.Random;
 @Component
 public class RandomFortuneService implements FortuneService {
 
-  private String[] responses = {
-    "Garbanzos",
-    "Broccoli",
-    "Tofu",
-    "Rice"
-  };
+  // Use commas to separate elements in array!
+  @Value("${fortune.random}")
+  private String[] responses;
 
   private Random random = new Random();
 
