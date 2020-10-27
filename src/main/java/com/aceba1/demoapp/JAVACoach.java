@@ -3,10 +3,9 @@ package com.aceba1.demoapp;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TennisCoach implements Coach {
-
+public class JAVACoach implements Coach {
   @Override
   public String getDailyWorkout() {
-    return "Practice your backend volley";
+    return "Write a 2000 line calculator program";
   }
 }
